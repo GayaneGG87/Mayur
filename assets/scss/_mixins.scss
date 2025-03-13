@@ -1,0 +1,6 @@
+
+@mixin bg-cover($w, $h, $url){
+    width: $w;
+    height: $h;
+    background-image:  url(#{$url});
+}

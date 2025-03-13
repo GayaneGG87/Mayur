@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  background-color: #E2EEEE;
+}
+
+a {
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
+.title {
+  font: 400 90px/30px "Montserrat";
+  color: #0C5E43;
+  margin-bottom: 55px;
+  text-align: center;
+}
+
+.sub-title {
+  font: 400 26px "Montserrat";
+  color: #000335;
+  text-align: center;
+}
+
+.content-title {
+  font: 400 30px/80px "Montserrat";
+  color: #000335;
+}
+
+.content-text {
+  font: 300 15px/27px "Montserrat";
+  color: #000335;
+}
+
+.card {
+  padding: 25px;
+  background-color: #F8F8F8;
+  border-radius: 10px;
+}
+
+.btn-card {
+  height: 50px;
+  padding: 0 50px;
+  color: #41414F;
+  background-color: #FFD655;
+  border-radius: 30px;
+  font: 400 20px "Montserrat";
+  border: unset;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/MontserratAlternates-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Niconne";
+  src: url("../fonts/Niconne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+header {
+  background-color: #0C5E43;
+  padding: 17px 0;
+  position: relative;
+}
+header .header-logo :first-child {
+  width: 100%;
+}
+header .header-logo :last-child {
+  width: 100%;
+  display: none;
+}
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+}
+header .navbar a {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.188rem;
+}
+header .header-right-side {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+header .header-right-side a {
+  text-decoration: underline;
+  color: #ffffff;
+  font: 400 13px/100% "Montserrat";
+}
+header .header-right-side #hamburger {
+  width: 35px;
+  height: 22px;
+  background-image: url("./../icons/hamburger.svg");
+  background-color: #0C5E43;
+  border: none;
+  display: none;
+}
+header .header-line {
+  width: 30%;
+  height: 5px;
+  background-color: #FFD655;
+  border-radius: 0 5px 5px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+main .main-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  min-height: 1046px;
+  width: 100%;
+  background: #E2EEEE url("./../images/desktop-coffee-group.png") no-repeat center 53px;
+  background-size: contain;
+}
+main .main-banner .desktop-content,
+main .main-banner .mobile-content {
+  margin-top: 124px;
+}
+main .main-banner .desktop-content h2,
+main .main-banner .mobile-content h2 {
+  text-align: center;
+  font-size: 55px;
+  font-weight: 400;
+  color: #0C5E43;
+  text-transform: uppercase;
+}
+main .main-banner .desktop-content p,
+main .main-banner .mobile-content p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 25px;
+  color: #000335;
+}
+main .main-banner .mobile-content {
+  display: none;
+}
+main .about {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #E2EEEE;
+  position: relative;
+  min-height: 892px;
+}
+main .about img {
+  position: absolute;
+  height: 892px;
+  width: 756px;
+  top: 0;
+  left: 0;
+}
+main .about article {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  gap: 40px;
+  padding-right: 100px;
+  padding-bottom: 20px;
+}
+main .about article h1 {
+  font-size: 90px;
+  font-weight: 400;
+  color: #0C5E43;
+}
+main .about article p {
+  padding-right: 40px;
+  color: #000335;
+}
+main .products {
+  display: flex;
+  flex-direction: column;
+  gap: 173px;
+  padding: 60px 0;
+}
+main .products .products-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+main .products .products-list .product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+main .products .products-list .product-card .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 30px 0;
+  font: 400 38px/30px "Niconne";
+}
+main .products .products-list .product-card .details sup {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+main .products .products-list .product-card .btn-order {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -25px;
+  text-wrap-mode: nowrap;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  main .about img {
+    width: 650px;
+    height: auto;
+  }
+  main .about article {
+    padding-right: 20px;
+  }
+  main .about article h1 {
+    font-size: 75px;
+  }
+}
+@media (max-width: 1300px) {
+  header .navbar {
+    gap: 10px;
+  }
+  header .navbar a {
+    font-size: 13px;
+  }
+  main .about img {
+    width: 500px;
+  }
+  main .about article {
+    margin-top: 100px;
+    width: calc(100% - 500px);
+  }
+  main .about article h1 {
+    font-size: 43px;
+  }
+}
+@media (max-width: 768px) {
+  header .header-logo :first-child {
+    display: none;
+  }
+  header .header-logo :last-child {
+    display: flex;
+  }
+  header nav {
+    display: none;
+  }
+  header .header-right-side #hamburger {
+    display: flex;
+  }
+  main .main-banner {
+    background-image: url("./../images/medium-coffee-group.png");
+    min-height: 881px;
+  }
+  main .main-banner .desktop-content {
+    display: none;
+  }
+  main .main-banner .mobile-content {
+    display: block;
+    margin-top: 88px;
+    padding: 0 20px;
+  }
+  main .main-banner .mobile-content h2 {
+    font-size: 63px;
+    text-transform: unset;
+  }
+  main .main-banner .mobile-content p {
+    font-size: 1rem;
+  }
+  main .about img {
+    width: 409px;
+    height: 491px;
+  }
+  main .about article {
+    width: 100%;
+    padding-right: 20px;
+  }
+  main .about article h1 {
+    margin-top: 150px;
+    padding-left: 50%;
+    display: flex;
+  }
+}
+@media (max-width: 480px) {
+  header .header-logo :last-child {
+    width: 131px;
+    height: 23px;
+  }
+  main .main-banner {
+    background-image: url("./../images/mobile-coffee-group.png");
+    min-height: 671px;
+  }
+  main .main-banner .mobile-content {
+    margin-top: 61px;
+  }
+  main .main-banner .mobile-content span {
+    display: none;
+  }
+  main .main-banner .mobile-content h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

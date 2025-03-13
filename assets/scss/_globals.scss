@@ -1,0 +1,70 @@
+// RESET  DEFAULT STYLES
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+    font-family: 'Montserrat';
+    background-color: $green-light;
+} 
+  a {
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;      
+  }
+  ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+
+//   GLOBAL CLASSES
+  
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1340px;
+    margin: 0 auto;
+    
+}
+.title{
+  font: 400 90px/30px "Montserrat";
+  color: $green;
+  margin-bottom: 55px;
+  text-align: center;
+}
+
+.sub-title{
+  font: 400 26px "Montserrat";
+  color: $grey-darker;
+  text-align: center;
+}
+
+.content-title{
+  font: 400 30px/80px "Montserrat";
+  color: $grey-darker;
+}
+.content-text{
+  font: 300 15px/27px "Montserrat";
+  color: $grey-darker;
+}
+
+.card{
+  padding: 25px;
+  background-color: $white-light;
+  border-radius: 10px;
+}
+  .btn-card{
+    height: 50px;
+    padding: 0 50px;
+    color:$grey-dark;
+    background-color: $orange;
+    border-radius: 30px;
+    font: 400 20px "Montserrat";
+    border: unset;
+  }
+        

@@ -1,0 +1,166 @@
+@import "variables";
+@import "mixins";
+@import "globals";
+@import "fonts";
+ 
+// HEADER SECTION STYLES
+header{
+    background-color: $green;
+    padding: 17px 0;
+    position: relative;
+    .header-logo{
+        :first-child{
+            width: 100%;
+        }
+        :last-child{
+            width:100%;
+            display: none;
+        }
+    } 
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        gap: 35px;
+        a{
+            color:$white;
+            font-weight: 600;
+            font-size: 1.188rem;
+        }
+    }
+    .header-right-side{
+        display: flex;
+        align-items: center;
+        gap: 23px;
+        a{
+            text-decoration: underline;
+            color: $white;
+            font: 400 13px/100% "Montserrat";
+        }
+        #hamburger{
+            width: 35px;
+            height: 22px;
+            background-image: url('./../icons/hamburger.svg');
+            background-color: $green;
+            border: none;
+            display: none;
+        }
+    }
+    
+    .header-line{
+        width: 30%;
+        height: 5px;
+        background-color: $orange;
+        border-radius: 0 5px 5px 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+// MAIN SECTION STYLES
+main{
+    // BANNER
+    .main-banner{
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+        min-height: 1046px;
+        width: 100%;
+        background: $green-light url('./../images/desktop-coffee-group.png') no-repeat center 53px;
+        background-size: contain;
+        .desktop-content, 
+        .mobile-content{
+            margin-top: 124px;
+            h2{
+                text-align: center;
+                font-size: 55px;
+                font-weight: 400;
+                color: $green;
+                text-transform: uppercase;
+            }
+            p{
+                text-align: center;
+                font-weight: 400;
+                font-size: 25px;
+                color: $grey-darker;
+            }
+        }
+        .mobile-content{
+            display: none
+        }
+       
+       
+            
+        
+    }
+    .about{
+        display: flex;
+        justify-content: flex-end;
+        background-color: $green-light;
+        position: relative;
+        min-height: 892px;
+       img{
+        position: absolute;
+        height: 892px;
+        width: 756px;
+        top: 0;
+        left: 0;
+       }
+        article{
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            gap: 40px;
+            padding-right: 100px;
+            padding-bottom: 20px;
+            h1{
+                font-size: 90px;
+                font-weight: 400;
+                color: $green;
+            }
+            p{
+                padding-right: 40px;
+                color: $grey-darker
+            }
+        }
+     
+    }
+    .products{
+      display: flex;
+      flex-direction: column;
+      gap: 173px;
+      padding: 60px 0;
+      .products-list{
+        display: flex;
+        justify-content: space-between;
+        gap:10px;
+        .product-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            .details{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin: 30px 0;
+                font: 400 38px/30px "Niconne";
+                sup{
+                    font-family:'Courier New', Courier, monospace;
+                    font-size: 14px;
+                }
+            }
+            .btn-order{
+               position: absolute;
+              left: 50%;
+              transform: translate(-50%);
+                bottom: -25px;
+                text-wrap-mode: nowrap;
+            }
+        }
+      }
+      
+    }
+}
+
+@import "media";

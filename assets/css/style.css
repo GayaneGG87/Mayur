@@ -121,6 +121,7 @@ header .navbar a {
 header .header-right-side {
   display: flex;
   align-items: center;
+  justify-content: _;
   gap: 23px;
 }
 header .header-right-side a {
@@ -171,18 +172,16 @@ header .navigation-menu ul a {
 header .navigation-menu .mobile-nav-logo {
   display: flex;
   flex-direction: column;
-  align-items: self-end;
+  align-items: end;
+  justify-content: self-end;
   gap: 30px;
 }
 
-main .main-banner {
-  display: flex;
-  flex-direction: column;
-  gap: 17px;
-  min-height: 1046px;
+main {
+  background: #E2EEEE url("../images/backgrounds/desktop-main-bg.svg") 100% 0/cover no-repeat;
+}
+main .main-banner img {
   width: 100%;
-  background: #E2EEEE url("./../images/desktop-coffee-group.png") no-repeat center 53px;
-  background-size: contain;
 }
 main .main-banner .desktop-content,
 main .main-banner .mobile-content {
@@ -195,6 +194,7 @@ main .main-banner .mobile-content h2 {
   font-weight: 400;
   color: #0C5E43;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 main .main-banner .desktop-content p,
 main .main-banner .mobile-content p {

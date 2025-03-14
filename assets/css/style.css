@@ -194,6 +194,7 @@ main .main-banner .mobile-content h2 {
   font-weight: 400;
   color: #0C5E43;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 main .main-banner .desktop-content p,
 main .main-banner .mobile-content p {
@@ -207,32 +208,36 @@ main .main-banner .mobile-content {
 }
 main .about {
   display: flex;
-  justify-content: flex-end;
-  background-color: #E2EEEE;
-  position: relative;
-  min-height: 892px;
+  align-items: center;
+  justify-content: start;
+  gap: 40px;
 }
 main .about img {
-  position: absolute;
-  height: 892px;
-  width: 756px;
-  top: 0;
-  left: 0;
-}
-main .about article {
   display: flex;
-  flex-direction: column;
-  width: 45%;
-  gap: 40px;
-  padding-right: 100px;
-  padding-bottom: 20px;
+  flex: 1;
+  height: auto;
+  min-width: 0;
+  max-width: 100%;
 }
-main .about article h1 {
+main .about .mobile-content {
+  display: none;
+}
+main .about h1 {
   font-size: 90px;
   font-weight: 400;
   color: #0C5E43;
 }
+main .about article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding-right: 100px;
+  padding-bottom: 20px;
+  flex: 1;
+}
 main .about article p {
+  font: 300 16px/25px "Montserrat";
   padding-right: 40px;
   color: #000335;
 }
@@ -276,6 +281,17 @@ main .products .products-list .product-card .btn-order {
   .container {
     max-width: 100%;
     padding: 0 30px 0 36px;
+  }
+  main .about article {
+    padding-right: 20px;
+  }
+  main .about article h1 {
+    font-size: 75px;
+  }
+}
+@media (max-width: 1300px) {
+  main .about {
+    align-items: start;
   }
 }
 @media (max-width: 1100px) {
@@ -323,6 +339,32 @@ main .products .products-list .product-card .btn-order {
   main .main-banner img {
     margin-top: -150px;
   }
+  main .about {
+    flex-wrap: wrap;
+    padding: 0 20px;
+    align-items: center;
+    gap: 5;
+  }
+  main .about .mobile-content {
+    display: flex;
+    width: 55%;
+    margin-left: -80px;
+  }
+  main .about h1 {
+    font-size: 43px;
+  }
+  main .about img {
+    max-width: 45%;
+  }
+  main .about p {
+    padding-right: 0 !important;
+  }
+  main .about article {
+    flex-basis: 400px;
+  }
+  main .about article .desktop-content {
+    display: none;
+  }
 }
 @media (max-width: 480px) {
   header .header-logo :last-child {
@@ -344,6 +386,19 @@ main .products .products-list .product-card .btn-order {
   main .main-banner .mobile-content h2 {
     font-size: 30px;
     margin-bottom: 40px;
+  }
+  main .about {
+    flex-direction: column;
+  }
+  main .about img,
+  main .about article {
+    max-width: 100%;
+  }
+  main .about .mobile-content {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    padding: 0 20px;
   }
 }
 

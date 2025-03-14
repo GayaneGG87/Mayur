@@ -4,6 +4,7 @@
         max-width: 100%;
         padding: 0 30px 0 36px;
     }
+
 // main .about{ 
 //       img{
 //     width: 650px;
@@ -67,26 +68,29 @@
             }
         }
     }
-    // main{
-    //     .main-banner{
-    //         background-image: url('./../images/medium-coffee-group.png');  
-    //         min-height: 881px; 
-    //         .desktop-content{
-    //             display: none;
-    //         }
-    //         .mobile-content{
-    //             display: block;
-    //             margin-top: 88px;
-    //             padding: 0 20px;
-    //             h2{
-    //                 font-size: 63px;
-    //                 text-transform: unset;
-    //             }
-    //             p{
-    //                 font-size: 1rem;
-    //             }
-    //         }
-    //     }    
+    main{
+        background-image: url('../images/backgrounds/medium-bg.png');
+        .main-banner{
+            .desktop-content{
+                display: none;
+            }
+            .mobile-content{
+                display: block;
+                margin-top: 127px;
+                padding: 0 20px;
+                h2{
+                    font-size: 63px;
+                    text-transform: unset;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+            img{
+                margin-top: -150px;
+            }
+  
+        }    
     //  .about {
     //     img{
     //         width: 409px;
@@ -103,7 +107,7 @@
     //     }
           
     //     }     
-    // }
+    }
 }
 
 @media(max-width: $mobile){
@@ -119,11 +123,10 @@
         }
     }
     main{
+        background-image: url('./../images/backgrounds/mobile-bg.png');
         .main-banner{
-            background-image: url('./../images/mobile-coffee-group.png');   
-            min-height: 671px;
             .mobile-content{
-                margin-top: 61px;
+                margin-top: 127px;
                 span{
                     display: none;
                 }

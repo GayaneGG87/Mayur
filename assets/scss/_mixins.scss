@@ -1,17 +1,23 @@
 
-@mixin flex-box($align: center, $justify: null){
+@mixin flex-box($align: center, $justify: null, $gap:null){
     display: flex;
     align-items: $align;
     @if $justify != null {
         justify-content: $justify;
     }
+    @if $gap != null {
+        gap: $gap;
+    }
 }
 
-@mixin flex-column($align: center, $justify: null){
+@mixin flex-column($align: center, $justify: null,  $gap:null){
     display: flex;
     flex-direction: column;
     align-items: $align;
     @if $justify != null {
         justify-content: $justify;
+    }
+    @if $gap != null {
+        gap: $gap;
     }
 }

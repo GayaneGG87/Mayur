@@ -2,10 +2,6 @@ import { productsList, viewComponent } from './utils.js';
 import { productCard } from './multiComponent.js';
 
 
-const productListComponent = document.getElementById('products-list');
-// viewComponent(productsList, productCard, productListComponent)
-
-
 // Header progressBar functional 
 function updateProgressBar() {
     let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -42,4 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+
+const productListComponent = document.getElementById('products-list');
+// viewComponent(productsList, productCard, productListComponent)
 

@@ -194,7 +194,6 @@ main .main-banner .mobile-content h2 {
   font-weight: 400;
   color: #0C5E43;
   text-transform: uppercase;
-  margin-bottom: 15px;
 }
 main .main-banner .desktop-content p,
 main .main-banner .mobile-content p {
@@ -303,6 +302,27 @@ main .products .products-list .product-card .btn-order {
   header .navigation-menu.active {
     display: flex;
   }
+  main {
+    background-image: url("../images/backgrounds/medium-bg.png");
+  }
+  main .main-banner .desktop-content {
+    display: none;
+  }
+  main .main-banner .mobile-content {
+    display: block;
+    margin-top: 127px;
+    padding: 0 20px;
+  }
+  main .main-banner .mobile-content h2 {
+    font-size: 63px;
+    text-transform: unset;
+  }
+  main .main-banner .mobile-content p {
+    font-size: 16px;
+  }
+  main .main-banner img {
+    margin-top: -150px;
+  }
 }
 @media (max-width: 480px) {
   header .header-logo :last-child {
@@ -312,12 +332,11 @@ main .products .products-list .product-card .btn-order {
   header .navigation-menu {
     background-image: unset;
   }
-  main .main-banner {
-    background-image: url("./../images/mobile-coffee-group.png");
-    min-height: 671px;
+  main {
+    background-image: url("./../images/backgrounds/mobile-bg.png");
   }
   main .main-banner .mobile-content {
-    margin-top: 61px;
+    margin-top: 127px;
   }
   main .main-banner .mobile-content span {
     display: none;

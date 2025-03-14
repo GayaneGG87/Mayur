@@ -23,16 +23,14 @@ header{
         }
     } 
     .navbar{
-        @include flex-box(_,space-between);
-        gap: 35px;
+        @include flex-box(_,space-between, 35px);
         a{
             color: $white;
             font-weight: 600;
             }
     }
     .header-right-side{
-        @include flex-box();
-        gap: 23px;
+        @include flex-box( center, _, 23px);
         a{
             text-decoration: underline;
             color: $white;
@@ -65,8 +63,7 @@ header{
         right: 0;
         padding: 47px 30px 26px 0;      
         ul{
-            @include flex-column(end, right);
-            gap: 40px;
+            @include flex-column(end, right, 40px);
             a{
                 font: 600 35px "Montserrat";
                 color: $grey-darker;
@@ -74,23 +71,19 @@ header{
         }
         display: none;
         .mobile-nav-logo{
-            @include flex-column(self-end);
-            gap:30px;
+            @include flex-column(end, self-end, 30px);
         }
     }
 }
 
 // MAIN SECTION STYLES
 main{
-    // BANNER
+    // Main Banner
+    background: $green-light url("../images/backgrounds/desktop-main-bg.svg") 100% 0/ cover no-repeat;
     .main-banner{
-        display: flex;
-        flex-direction: column;
-        gap: 17px;
-        min-height: 1046px;
-        width: 100%;
-        background: $green-light url('./../images/desktop-coffee-group.png') no-repeat center 53px;
-        background-size: contain;
+        img{
+            width: 100%;
+        }
         .desktop-content, 
         .mobile-content{
             margin-top: 124px;
@@ -100,6 +93,7 @@ main{
                 font-weight: 400;
                 color: $green;
                 text-transform: uppercase;
+                margin-bottom: 15px;
             }
             p{
                 text-align: center;

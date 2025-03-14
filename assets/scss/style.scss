@@ -111,31 +111,29 @@ main{
         
     }
     .about{
-        display: flex;
-        justify-content: flex-end;
-        background-color: $green-light;
-        position: relative;
-        min-height: 892px;
+        @include flex-box(center, start, 40px);
        img{
-        position: absolute;
-        height: 892px;
-        width: 756px;
-        top: 0;
-        left: 0;
+        display: flex;
+        flex: 1;         
+        height: auto;
+        min-width: 0;     
+        max-width: 100%; 
        }
+       .mobile-content{
+        display: none;
+       }
+       h1{
+        font-size: 90px;
+        font-weight: 400;
+        color: $green;
+    }
         article{
-            display: flex;
-            flex-direction: column;
-            width: 45%;
-            gap: 40px;
+            @include flex-column(center, null, 40px);
             padding-right: 100px;
             padding-bottom: 20px;
-            h1{
-                font-size: 90px;
-                font-weight: 400;
-                color: $green;
-            }
+            flex: 1;
             p{
+                font:300 16px/25px "Montserrat";
                 padding-right: 40px;
                 color: $grey-darker
             }

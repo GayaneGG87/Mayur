@@ -5,19 +5,26 @@
     padding: 0;
     box-sizing: border-box;
   }
+
 body{
-    font-family: 'Montserrat';
+    font-family: 'Montserrat' , sans-serif;
     background-color: $green-light;
 } 
+
   a {
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;      
   }
+
   ul{
     display: flex;
     align-items: center;
     list-style: none;
+  }
+  
+  button{
+    border: none;
   }
 
 
@@ -32,24 +39,24 @@ body{
     
 }
 .title{
-  font: 400 90px/30px "Montserrat";
+  font: 400 90px/30px;
   color: $green;
   margin-bottom: 55px;
   text-align: center;
 }
 
 .sub-title{
-  font: 400 26px "Montserrat";
+  font: 400 26px;
   color: $grey-darker;
   text-align: center;
 }
 
 .content-title{
-  font: 400 30px/80px "Montserrat";
+  font: 400 30px/80px;
   color: $grey-darker;
 }
 .content-text{
-  font: 300 15px/27px "Montserrat";
+  font: 300 15px/27px;
   color: $grey-darker;
 }
 
@@ -64,7 +71,7 @@ body{
     color:$grey-dark;
     background-color: $orange;
     border-radius: 30px;
-    font: 400 20px "Montserrat";
+    font: 400 20px;
     border: unset;
   }
         

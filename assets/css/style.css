@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   background-color: #E2EEEE;
 }
 
@@ -21,6 +21,10 @@ ul {
   list-style: none;
 }
 
+button {
+  border: none;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -30,25 +34,25 @@ ul {
 }
 
 .title {
-  font: 400 90px/30px "Montserrat";
+  font: 400 90px/30px;
   color: #0C5E43;
   margin-bottom: 55px;
   text-align: center;
 }
 
 .sub-title {
-  font: 400 26px "Montserrat";
+  font: 400 26px;
   color: #000335;
   text-align: center;
 }
 
 .content-title {
-  font: 400 30px/80px "Montserrat";
+  font: 400 30px/80px;
   color: #000335;
 }
 
 .content-text {
-  font: 300 15px/27px "Montserrat";
+  font: 300 15px/27px;
   color: #000335;
 }
 
@@ -64,7 +68,7 @@ ul {
   color: #41414F;
   background-color: #FFD655;
   border-radius: 30px;
-  font: 400 20px "Montserrat";
+  font: 400 20px;
   border: unset;
 }
 
@@ -83,26 +87,36 @@ ul {
   font-display: swap;
 }
 header {
-  background-color: #0C5E43;
-  padding: 17px 0;
-  position: relative;
-}
-header .header-logo :first-child {
+  display: flex;
+  align-items: _;
+  justify-content: space-between;
   width: 100%;
+  height: 68px;
+  background-color: #0C5E43;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+header section {
+  flex-grow: 1;
+}
+header .header-logo {
+  display: flex;
+  align-items: center;
 }
 header .header-logo :last-child {
-  width: 100%;
   display: none;
 }
 header .navbar {
   display: flex;
+  align-items: _;
   justify-content: space-between;
   gap: 35px;
 }
 header .navbar a {
   color: #ffffff;
   font-weight: 600;
-  font-size: 1.188rem;
 }
 header .header-right-side {
   display: flex;
@@ -114,22 +128,51 @@ header .header-right-side a {
   color: #ffffff;
   font: 400 13px/100% "Montserrat";
 }
-header .header-right-side #hamburger {
+header .header-right-side .hamburger {
   width: 35px;
   height: 22px;
-  background-image: url("./../icons/hamburger.svg");
-  background-color: #0C5E43;
-  border: none;
+  background: #0C5E43 url("./../icons/hamburger.svg");
   display: none;
 }
-header .header-line {
-  width: 30%;
+header .progress-bar {
+  width: 0;
   height: 5px;
   background-color: #FFD655;
   border-radius: 0 5px 5px 0;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
+}
+header .navigation-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: self-end;
+  justify-content: space-between;
+  width: 100%;
+  height: calc(100vh - 68px);
+  background: #E2EEEE url("./../images/backgrounds/medium-navbar-bg.png") 0% 0%/contain no-repeat;
+  position: absolute;
+  top: 68px;
+  right: 0;
+  padding: 47px 30px 26px 0;
+  display: none;
+}
+header .navigation-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: right;
+  gap: 40px;
+}
+header .navigation-menu ul a {
+  font: 600 35px "Montserrat";
+  color: #000335;
+}
+header .navigation-menu .mobile-nav-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: self-end;
+  gap: 30px;
 }
 
 main .main-banner {
@@ -233,35 +276,15 @@ main .products .products-list .product-card .btn-order {
 @media (max-width: 1400px) {
   .container {
     max-width: 100%;
-    padding: 0 20px;
-  }
-  main .about img {
-    width: 650px;
-    height: auto;
-  }
-  main .about article {
-    padding-right: 20px;
-  }
-  main .about article h1 {
-    font-size: 75px;
+    padding: 0 30px 0 36px;
   }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1100px) {
   header .navbar {
     gap: 10px;
   }
   header .navbar a {
-    font-size: 13px;
-  }
-  main .about img {
-    width: 500px;
-  }
-  main .about article {
-    margin-top: 100px;
-    width: calc(100% - 500px);
-  }
-  main .about article h1 {
-    font-size: 43px;
+    font-size: 14px;
   }
 }
 @media (max-width: 768px) {
@@ -271,42 +294,13 @@ main .products .products-list .product-card .btn-order {
   header .header-logo :last-child {
     display: flex;
   }
-  header nav {
+  header .navigation {
     display: none;
   }
-  header .header-right-side #hamburger {
+  header .header-right-side .hamburger {
     display: flex;
   }
-  main .main-banner {
-    background-image: url("./../images/medium-coffee-group.png");
-    min-height: 881px;
-  }
-  main .main-banner .desktop-content {
-    display: none;
-  }
-  main .main-banner .mobile-content {
-    display: block;
-    margin-top: 88px;
-    padding: 0 20px;
-  }
-  main .main-banner .mobile-content h2 {
-    font-size: 63px;
-    text-transform: unset;
-  }
-  main .main-banner .mobile-content p {
-    font-size: 1rem;
-  }
-  main .about img {
-    width: 409px;
-    height: 491px;
-  }
-  main .about article {
-    width: 100%;
-    padding-right: 20px;
-  }
-  main .about article h1 {
-    margin-top: 150px;
-    padding-left: 50%;
+  header .navigation-menu.active {
     display: flex;
   }
 }
@@ -314,6 +308,9 @@ main .products .products-list .product-card .btn-order {
   header .header-logo :last-child {
     width: 131px;
     height: 23px;
+  }
+  header .navigation-menu {
+    background-image: unset;
   }
   main .main-banner {
     background-image: url("./../images/mobile-coffee-group.png");

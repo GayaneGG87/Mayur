@@ -141,28 +141,23 @@ main{
      
     }
     .products{
-      display: flex;
-      flex-direction: column;
-      gap: 173px;
-      padding: 60px 0;
+        @include flex-column(center, null, 173px);
+        padding-top: 60px;
+        padding-bottom: 60px;
       .products-list{
-        display: flex;
-        justify-content: space-between;
-        gap:10px;
+        @include flex-box(center, space-between, 24px);
+       
         .product-card{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            @include flex-column(_, center);
             position: relative;
+            width: 23%;
+
             .details{
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
+                @include flex-box(flex-end, space-between);
                 margin: 30px 0;
                 font: 400 38px/30px "Niconne";
                 sup{
-                    font-family:'Courier New', Courier, monospace;
-                    font-size: 14px;
+                    font: 14px 'Courier New', Courier, monospace;
                 }
             }
             .btn-order{

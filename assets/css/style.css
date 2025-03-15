@@ -242,32 +242,35 @@ main .about article p {
   color: #000335;
 }
 main .products {
-  display: flex;
   flex-direction: column;
   gap: 173px;
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 main .products .products-list {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 24px;
+  width: 100%;
 }
 main .products .products-list .product-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
+  flex-grow: 1;
+  min-width: 150px;
 }
 main .products .products-list .product-card .details {
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
+  justify-content: space-between;
   margin: 30px 0;
   font: 400 38px/30px "Niconne";
 }
 main .products .products-list .product-card .details sup {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 14px;
+  font: 14px "Courier New", Courier, monospace;
 }
 main .products .products-list .product-card .btn-order {
   position: absolute;
@@ -300,6 +303,29 @@ main .products .products-list .product-card .btn-order {
   }
   header .navbar a {
     font-size: 14px;
+  }
+  main .products {
+    gap: 101px;
+  }
+  main .products .products-list {
+    gap: 7px;
+  }
+  main .products .products-list .product-card:last-of-type {
+    display: none;
+  }
+  main .products .products-list .product-card .btn-order {
+    font-size: 17px;
+    height: 34px;
+    padding: 0 19px;
+    bottom: -17px;
+  }
+  main .products .products-list .product-card .details {
+    margin: 13px 0;
+    font-size: 30px;
+  }
+  .content-text {
+    font-size: 15px;
+    line-height: 27px;
   }
 }
 @media (max-width: 768px) {
@@ -365,6 +391,18 @@ main .products .products-list .product-card .btn-order {
   main .about article .desktop-content {
     display: none;
   }
+  .content-title {
+    font-size: 20px;
+  }
+  .title {
+    font-size: 43px;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+  .sub-title {
+    font-size: 18px;
+    height: 100%;
+  }
 }
 @media (max-width: 480px) {
   header .header-logo :last-child {
@@ -399,6 +437,54 @@ main .products .products-list .product-card .btn-order {
     font-size: 30px;
     text-align: center;
     padding: 0 20px;
+  }
+  main .products {
+    gap: 50px;
+  }
+  main .products .products-list {
+    flex-wrap: wrap;
+    gap: 20px 7px;
+  }
+  main .products .products-list .product-card {
+    min-width: 163px;
+    max-width: 48%;
+  }
+  main .products .products-list .product-card .details {
+    margin: 13px 0;
+    font-size: 20px;
+  }
+  main .products .products-list .product-card .btn-order {
+    font-size: 15px;
+    height: 25px;
+    padding: 0 12px;
+    bottom: -12px;
+  }
+  main .products .products-list .product-card:last-of-type {
+    display: flex;
+  }
+  .card {
+    padding: 13px;
+  }
+  .content-text {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .content-title {
+    font-size: 18px;
+    line-height: 40px;
+  }
+  .title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .sub-title {
+    font-size: 15px;
+    line-height: 100%;
+  }
+}
+@media (max-width: 380px) {
+  main .products .products-list .product-card {
+    min-width: 100%;
   }
 }
 

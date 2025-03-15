@@ -31,9 +31,38 @@ main {
             }      
         }
     }
+    main{
+        .products{
+            gap: 101px;
+            .products-list{
+                gap: 7px;
+                .product-card{
+                    &:last-of-type{
+                        display: none;
+                    }
+                    .btn-order{
+                        font-size: 17px;
+                        height: 34px;
+                        padding: 0 19px;
+                        bottom: -17px;
+                    }
+                    .details{
+                        margin: 13px 0;
+                        font-size: 30px;
+                    }
+                 }
+            }
+        }
+       
+    }
+    .content-text{
+        font-size: 15px;
+        line-height: 27px;
+    }
 }
 
 @media(max-width: $medium){
+   
     header{
         .header-logo{
             :first-child{
@@ -111,6 +140,18 @@ main {
           
         }     
     }
+    .content-title{
+        font-size: 20px;
+    }
+    .title{
+        font-size: 43px;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+    .sub-title{
+        font-size: 18px;
+        height: 100%;
+    }
 }
 
 @media(max-width: $mobile){
@@ -152,6 +193,56 @@ main {
             padding: 0 20px;
         }
         }  
+        .products{
+            gap: 50px;
+            .products-list{
+                flex-wrap: wrap;
+                gap: 20px 7px;
+                .product-card{
+                    min-width: 163px;
+                    max-width: 48%;
+                    .details{
+                        margin: 13px 0;
+                        font-size: 20px;
+                    }
+                    .btn-order{
+                        font-size: 15px;
+                        height: 25px;
+                        padding: 0 12px;
+                        bottom: -12px;
+                    }
+                    &:last-of-type{
+                        display: flex;
+                    }
+                }
+            }
+        }
         
+    }
+    .card{
+        padding: 13px;
+    }
+    .content-text{
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .content-title{
+        font-size: 18px;
+        line-height: 40px;
+    }
+    .title{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .sub-title{
+        font-size: 15px;
+        line-height: 100%;
+    }
+}
+
+
+@media (max-width: 380px) {
+    main .products .products-list .product-card {
+        min-width: 100%;
     }
 }

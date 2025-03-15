@@ -141,16 +141,19 @@ main{
      
     }
     .products{
-        @include flex-column(center, null, 173px);
+        flex-direction: column;
+        gap: 173px;
         padding-top: 60px;
         padding-bottom: 60px;
       .products-list{
         @include flex-box(center, space-between, 24px);
+        width: 100%;
        
         .product-card{
-            @include flex-column(_, center);
+            @include flex-column(null, center);
             position: relative;
-            width: 23%;
+            flex-grow: 1;
+            min-width: 150px;
 
             .details{
                 @include flex-box(flex-end, space-between);

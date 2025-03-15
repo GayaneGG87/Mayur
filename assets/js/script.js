@@ -39,7 +39,3 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-const productListComponent = document.getElementById('products-list');
-// viewComponent(productsList, productCard, productListComponent)
-
